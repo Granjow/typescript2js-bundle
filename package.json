@@ -4,7 +4,7 @@
   "description": "Create (optionally minified) JavaScript bundles from TypeScript resources",
   "main": "index.js",
   "scripts": {
-    "test": "node node_modules/jasmine/bin/jasmine.js"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",

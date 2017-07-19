@@ -1,4 +1,5 @@
-var path = require( 'path' ),
+const
+    path = require( 'path' ),
     rimraf = require( 'rimraf' ),
     buildBundle = require( '..' ).buildBundle;
 

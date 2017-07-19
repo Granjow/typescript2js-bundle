@@ -1,4 +1,5 @@
-var fs = require( 'fs' ),
+const
+    fs = require( 'fs' ),
     path = require( 'path' ),
     Browserify = require( 'browserify' ),
     UglifyJS = require( 'uglify-js' );
@@ -21,14 +22,14 @@ function buildBundle( bundleName, bundleDir, files, tsArgs ) {
             // Probably already exists, ignore
         }
 
-        var dist = path.join( bundleDir, `${bundleName}.js` ),
+        let dist = path.join( bundleDir, `${bundleName}.js` ),
             distMin = path.join( bundleDir, `${bundleName}.min.js` ),
             distStream = fs.createWriteStream( dist );
 
-        var browserify = Browserify();
+        let browserify = Browserify();
         files.forEach( f => browserify.add( f ) );
 
-        var bundle = browserify
+        let bundle = browserify
             .plugin( 'tsify', tsArgs )
             .bundle()
             .on( 'error', err => {
@@ -39,7 +40,7 @@ function buildBundle( bundleName, bundleDir, files, tsArgs ) {
 
         bundle.on( 'finish', () => {
             try {
-                var result = UglifyJS.minify( dist );
+                const result = UglifyJS.minify( dist );
                 fs.writeFileSync( distMin, result.code, { encoding: 'utf-8' } );
                 resolve( { files: [ dist, distMin ] } );
             } catch ( err ) {
