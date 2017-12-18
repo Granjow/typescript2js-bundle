@@ -1,4 +1,4 @@
-Creates plain JavaScript bundles from TypeScript files.
+Creates plain ES5 JavaScript bundles from TypeScript and JavaScript files.
 
 ## Usage
 

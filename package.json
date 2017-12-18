@@ -19,10 +19,11 @@
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "babelify": "^8.0.0",
     "browserify": "^14.5.0",
     "tsify": "^3.0.4",
-    "uglify-js": "^3.0.25"
+    "uglify-js": "^3.2.2"
   },
   "devDependencies": {
     "jasmine": "^2.8.0",

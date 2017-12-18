@@ -31,7 +31,7 @@ function buildBundle( bundleName, bundleDir, files, tsArgs ) {
 
         let bundle = browserify
             .plugin( 'tsify', tsArgs )
-            .transform( 'babelify' )
+            .transform( 'babelify', { presets: [ 'env' ] } )
             .bundle()
             .on( 'error', err => {
                 // TypeScript error; ignore
