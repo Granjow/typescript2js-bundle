@@ -1,5 +1,7 @@
 Creates plain ES5 JavaScript bundles from TypeScript and JavaScript files.
 
+**This package is not actively maintained. Use Browserify and Co. directly.**
+
 ## Usage
 
     var path = require( 'path' ),
