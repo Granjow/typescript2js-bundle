@@ -1,6 +1,6 @@
 {
   "name": "typescript2js-bundle",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "Create (optionally minified) JavaScript bundles from TypeScript resources",
   "main": "index.js",
   "scripts": {
